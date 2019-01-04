@@ -37,3 +37,8 @@ person.age = 30;
 // person now has an age of 30, but thirdPerson still has an age of 29
 console.log(person);
 console.log(thirdPerson);
+
+// will output hobbies with all 3 hobies even though we took a copy of the person object. Object assign doesn't create a deep clone, arrays are also byref
+// so the copy is still pointed to the place in memory that is storing the array
+person.hobbies.push('Reading');
+console.log(thirdPerson);
